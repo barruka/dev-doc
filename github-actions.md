@@ -19,5 +19,5 @@
 9. Two possibilites: 
     1. Navigate to `https://gitignore.io` and type in "VisualStudio", hit CREATE button and copy the generated code
     2. Install `gitignore Extension for VisualStudio Code from CodeZombie`. Once installed: F1 key, Add gitignore, VisualStudio, Append
-10.Still in `.gitignore` find `# User-specific files` section and add at the end of the section a new line: `.vs`
-11.
+10. Still in `.gitignore` find `# User-specific files` section and add at the end of the section a new line: `.vs`
+11. 
