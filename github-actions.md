@@ -3,7 +3,7 @@
 ## Prerequisites
 1. An existing user account in GitHub
 2. git installed in your local computer
-3. Visual Studio Code installed in your local computer
+3. Visual Studio Code (VSCode from now on) installed in your local computer
 
 ## Procedure
 
@@ -18,7 +18,7 @@
 6. Copy the code of your application to this folder. There is other possibilities to directly add github as a remote to an existing folder, but this is the EASY WAY (it's up to you)
 
 ### .gitignore
-1. Open the folder in Visual Studio Code, or another text editor
+1. Open the folder in VSCode, or another text editor
 2. Add a git ignore file (starts with a dot): `.gitignore`
 3. Two possibilites: 
     1. Navigate to `https://gitignore.io` and type in "VisualStudio", hit CREATE button and copy the generated code
@@ -53,7 +53,19 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '5.0.x'
+     
+      - name: Restore dependencies
+        run: dotnet Restore
+
+      - name: Build app
+        run: dotnet build -c Release --no-Restore
 ```
 
+### Compile the app
+1. Open a terminal inside VSCode
+2. Fetches all the necessary packages from nuget.org and installs them locally: `dotnet restore`
+3. Build the app: `dotnet build -c Release --no-restore`
+4. Run unit tests (if any): `dotnet test`
+5. 
 
 
