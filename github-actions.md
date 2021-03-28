@@ -45,6 +45,9 @@ on:
     branches:
       - master
 
+env:
+  DOTNET_VERSION: '5.0.x'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,7 +58,7 @@ jobs:
       - name: Setup .NET 5 
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: ${{ env.DOTNET_VERSION }}
      
       - name: Restore dependencies
         run: dotnet restore
@@ -97,7 +100,7 @@ jobs:
 4. Name: `AZURE_WEBAPP_PUBLISH_SECRET` (no spaces)
 5. Value: The content of the publish settings downloaded from Azure in step 1
 6. In VSCode edit .yaml file adding:
-> Beware that app-name is the name of the **Web App** in Azure
+> Beware that **app-name** is the name of the **Web App** in Azure. If you want, you can create a new "env" setting to the app name.
 ```yaml
       - name: Publish app
         run: dotnet publish -c Release -o ./out
