@@ -1,4 +1,4 @@
-# GitHub Actions
+# GitHub Actions for an .NET ASP.Net Core
 
 ## Prerequisites
 1. An existing user account in GitHub
@@ -27,4 +27,33 @@
 5. Commit and Push
 
 ### actions
+1. Install GitHub actions VSCode extension: `GitHub Actions` from Christopher Schleiden
+2. VSCode will ask if add some, do it. 
+3. Maybe you have to allow VScode to manage GitHub Actions. Check accounts icon on bottom left side if it is asking for permissions.
+4. Close and reopen VSCode.
+5. Create a new folder in folder root: `.github`
+6. Inside of `.github`, create a subfolder: `workflows`
+7. Inside of `workflows`, create a yaml file: `ci-cd.yaml`
+```yaml
+name: Continuous Integration and Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      
+      - name: Setup .NET 5 
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+```
+
+
 
