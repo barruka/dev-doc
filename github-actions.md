@@ -1,4 +1,4 @@
-# GitHub Actions for an .NET ASP.Net Core
+# GitHub Actions for an .NET ASP.Net Core in AZURE
 
 ## Prerequisites
 1. An existing user account in GitHub
@@ -89,3 +89,23 @@ jobs:
 5. Go to **<> Code** and **Add file** then **Create new file**: `readme.md`
 6. At the very beginning pase the status badge markdown and **Commit changes**
 7. In your local computer, git **pull** to get the readme.md file
+
+### Azure
+1. After creating the **App Service** in Azure, **Get Publish Profile** file 
+2. In GitHub go to **Settings** and in the left hand side click on **Secrets**
+3. Click on right button **New repository secret**
+4. Name: `AZURE_WEBAPP_PUBLISH_SECRET` (no spaces)
+5. Value: The content of the publish settings downloaded from Azure in step 1
+6. In VSCode edit .yaml file adding:
+> Beware that app-name is the name of the **Web App** in Azure
+```yaml
+      - name: Publish app
+        run: dotnet publish -c Release -o ./out
+
+      - name: Deploy to Azure Web Apps
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: apiexample
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_SECRET }}
+          package: ./out
+```
