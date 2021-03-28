@@ -58,10 +58,10 @@ jobs:
           dotnet-version: '5.0.x'
      
       - name: Restore dependencies
-        run: dotnet Restore
+        run: dotnet restore
 
       - name: Build app
-        run: dotnet build -c Release --no-Restore
+        run: dotnet build -c Release --no-restore
 ```
 8. Git commit: Add CD/CI Pipeline
 9. Git push
