@@ -24,7 +24,7 @@
     1. Navigate to `https://gitignore.io` and type in "VisualStudio", hit CREATE button and copy the generated code
     2. Install `gitignore Extension for VisualStudio Code from CodeZombie`. Once installed: F1 key, Add gitignore, VisualStudio, Append
 4. Still in `.gitignore` find `# User-specific files` section and add at the end of the section a new line: `.vs`
-5. Commit and Push
+5. **Commit** and **Push**
 
 ### actions
 1. Install GitHub actions VSCode extension: `GitHub Actions` from Christopher Schleiden
@@ -68,8 +68,8 @@ jobs:
       - name: Run automated tests
         run: dotnet test -c Release --no-build
 ```
-9. Git commit: Add CD/CI Pipeline
-10. Git push
+9. Git **commit**: Add CD/CI Pipeline
+10. Git **push**
 
 ### Compile the app locally to test it
 1. Open a terminal inside VSCode
@@ -86,5 +86,6 @@ jobs:
 2. On the left hand side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
 3. On the right hand side, click on the tree horizontal dots and select `Create status badge`
 4. Click on the button **Copy status badge Markdown**
-5. Go to **<> Code** and **Add file** > **Create new file** `readme.md`
+5. Go to **<> Code** and **Add file** then **Create new file**: `readme.md`
 6. At the very beginning pase the status badge markdown and **Commit changes**
+7. In your local computer, git **pull** to get the readme.md file
