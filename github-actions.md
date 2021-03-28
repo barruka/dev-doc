@@ -63,16 +63,30 @@ jobs:
       - name: Build app
         run: dotnet build -c Release --no-restore
 ```
-8. Git commit: Add CD/CI Pipeline
-9. Git push
+8. If the app has Tests you have to add:
+```yaml
+      - name: Run automated tests
+        run: dotnet test -c Release --no-build
+```
+9. Git commit: Add CD/CI Pipeline
+10. Git push
 
 ### Compile the app locally to test it
 1. Open a terminal inside VSCode
 2. Fetches all the necessary packages from nuget.org and installs them locally: `dotnet restore`
 3. Build the app: `dotnet build -c Release --no-restore`
-4. Run unit tests (if any): `dotnet test`
 
 ### Actions
 1. Navigate to the project in GitHub and click **ACTIONS**
-2. On the left side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
+2. On the left hand side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
 3. Click on it to see the workflows
+
+### Create status badge
+1. Navigate to the project in GitHub and click **ACTIONS**
+2. On the left hand side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
+3. On the right hand side, click on the tree horizontal dots and select `Create status badge`
+4. Click on the button **Copy status badge Markdown**
+5. Go to **<> Code** and **Add file** > **Create new file** `readme.md`
+6. At the very beginning pase the status badge markdown
+7. 
+8. 
