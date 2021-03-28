@@ -1,9 +1,10 @@
 # GitHub Actions for an .NET ASP.Net Core in AZURE
 
 ## Prerequisites
-1. An existing user account in GitHub
+1. An existing user account in **GitHub**
 2. git installed in your local computer
-3. Visual Studio Code (VSCode from now on) installed in your local computer
+3. Visual Studio Code (**VSCode** from now on) installed in your local computer
+4. An existing user account in **Azure**
 
 ## Procedure
 
