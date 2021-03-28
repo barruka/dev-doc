@@ -75,4 +75,4 @@ jobs:
 ### Actions
 1. Navigate to the project in GitHub and click **ACTIONS**
 2. On the left side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
-3. 
+3. Click on it to see the workflows
