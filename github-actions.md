@@ -87,6 +87,4 @@ jobs:
 3. On the right hand side, click on the tree horizontal dots and select `Create status badge`
 4. Click on the button **Copy status badge Markdown**
 5. Go to **<> Code** and **Add file** > **Create new file** `readme.md`
-6. At the very beginning pase the status badge markdown
-7. 
-8. 
+6. At the very beginning pase the status badge markdown and **Commit changes**
