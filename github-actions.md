@@ -34,13 +34,16 @@
 5. Create a new folder in folder root: `.github`
 6. Inside of `.github`, create a subfolder: `workflows`
 7. Inside of `workflows`, create a yaml file: `ci-cd.yaml`
+
+> ATENTION: On March 2021 GitHub is changing **master** branch name to **main** so check the name of your main branch!
+
 ```yaml
 name: Continuous Integration and Deployment
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -60,12 +63,16 @@ jobs:
       - name: Build app
         run: dotnet build -c Release --no-Restore
 ```
+8. Git commit: Add CD/CI Pipeline
+9. Git push
 
-### Compile the app
+### Compile the app locally to test it
 1. Open a terminal inside VSCode
 2. Fetches all the necessary packages from nuget.org and installs them locally: `dotnet restore`
 3. Build the app: `dotnet build -c Release --no-restore`
 4. Run unit tests (if any): `dotnet test`
-5. 
 
-
+### Actions
+1. Navigate to the project in GitHub and click **ACTIONS**
+2. On the left side: **Workflows > All workflows** must have `Continuous Integration and Deployment` (the name we gave in yaml file)
+3. 
