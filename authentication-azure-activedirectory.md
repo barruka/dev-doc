@@ -1,9 +1,20 @@
 # Authentication: ASP.NET Core and Azure Active Directory
 
-**Azure Services** > **Azure Active Directory**
-Left side menú > Manage > **App Registrations**
+- **Azure Services**
+- **Azure Active Directory** (AAD)
+- Left side menú > Manage > **App Registrations**
 
-  
+## Register our client app inside the auth server
+
+- New Registration
+- Set Name
+- Set Supported account types
+- Ignore Redirect Uri
+- Click **REGISTER**
+- 
+
+## Tell AAD that there is a protected resource (our API)
+
 
 <img src="https://i.postimg.cc/0jdL19qT/aad-auth.jpg">
 
