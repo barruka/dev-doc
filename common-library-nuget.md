@@ -13,6 +13,9 @@
 11. In section **tasks** after **"problemMatcher": "$msCompile"** add:
 12. ` , "group": { "kind": "build", "isDefault": true }`
 13. In the terminal, navigate to src/**Your_Project_Name.Common**
-14. 
-15. 
-  
+14. `dotnet add package Microsoft.Extensions.Configuration`
+15. `dotnet add package Microsoft.Extensions.Configuration.Binder`
+16. `dotnet add package Microsoft.Extensions.DependencyInjection`
+17. `dotnet add package Microsoft.EntityFrameworkCore`
+18. `dotnet add package MySQL.EntityFrameworkCore`
+19. 
