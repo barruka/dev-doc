@@ -19,4 +19,3 @@
 16. `dotnet add package Microsoft.Extensions.DependencyInjection`
 17. `dotnet add package Microsoft.EntityFrameworkCore`
 18. `dotnet add package MySQL.EntityFrameworkCore`
-19.
