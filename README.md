@@ -1,5 +1,5 @@
 # dev-doc
 
-Some useful to-the-point info to work with github and C#
+Some useful to-the-point info to develop with C# and VSCode
 
 
