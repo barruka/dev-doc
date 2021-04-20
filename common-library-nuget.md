@@ -12,6 +12,7 @@
 10. Browse for **.vscode** and click to edit on **tasks.json**
 11. In section **tasks** after **"problemMatcher": "$msCompile"** add:
 12. ` , "group": { "kind": "build", "isDefault": true }`
-13. Add nuget packages:
+13. In the terminal, navigate to src/**Your_Project_Name.Common**
 14. 
+15. 
   
