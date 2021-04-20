@@ -8,5 +8,11 @@
 6. `donet new classlib -n **Your_Project_Name.Common**`
 7. Check if OmniSharp Server is running: Browse files an click in Class1.cs. On the bottom left side corner you must find a **flame icon** that represents OmniSharp Server.
 8. Menu **`View > Command Palette > .NET Generate Assets for Build and Debug`**
-9. Browse for **.vscode** and click on **tasks.json**
-10. 
+9. Browse for **.vscode** and click to edit on **tasks.json**
+10. In section **tasks** after **"problemMatcher": "$msCompile"** add:
+11. ` ,
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }`
+  
