@@ -1,4 +1,5 @@
 # How to create a common library and use it in nuget
+**in progress, not ended**
 
 1. Open VSCode
 2. Open a terminal
