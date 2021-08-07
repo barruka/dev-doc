@@ -22,3 +22,8 @@
 
 After finished:
 `dotnet pack -p:PackageVersion=x.y.z -o ..\..\..\packages`
+
+You have to add your local packages folders to nuget sources:
+`dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>]`
+`dotnet nuget add source d:\repos\packages --name StoreLocal`
+
