@@ -20,7 +20,7 @@ foreach ($file in $files) {
     
     foreach ($match in $matches) {
 
-        $packageName = $match.Groups[1].Value
+        $packageName = $match.Groups[1].Value.ToLower()
         $currentVersion = $match.Groups[2].Value
 
         if ($distinctPackageReferences -notcontains $match.Value) {
