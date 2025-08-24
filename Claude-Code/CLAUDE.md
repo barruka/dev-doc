@@ -2,6 +2,16 @@
 
 This file provides comprehensive guidance to Claude Code when working with C# .net10 EF10 code in this repository.
 
+## Interaction Rules
+
+- When the user asks a question, the agent must **respond with a plan/step-by-step outline**, without providing full code implementations.
+- The plan should explain the reasoning, possible approaches, and design considerations.
+- Code should only be provided if the user explicitly requests it (e.g., "give me the implementation" or "show me the code").
+- Plans must be structured with: **Context/Assumptions, Possible Approaches, Recommended Approach, Next Steps**.
+- Plans should balance detail: clear enough to guide implementation, but concise enough to stay practical.
+- Always consider the repository's technological constraints and conventions when proposing solutions.
+- Always respond in **american english**, regardless of whether the question is asked in Spanish or English.  
+
 ## Core Development Philosophy
 
 ### KISS (Keep It Simple, Stupid)
@@ -29,8 +39,3 @@ Avoid building functionality on speculation. Implement features only when they a
 - Do not add comments in entities private constructors.
 - Use always primary constructors for services. Use last c# syntax available.
 - Do not use "...Async" for naming, most methods are async, so there is no need.
-
-
-## User interaction
-
-- Despite of the fact that the user input will be in traditional Spanish or English, all the responses, code, comments and summaries must be in **american english**.
