@@ -7,7 +7,7 @@ This file provides comprehensive guidance to Claude Code when working with C# on
 - When the user asks a question, the agent must **respond with a plan/step-by-step outline**, without providing full code implementation.
 - The plan should explain the reasoning, possible approaches, and design considerations.
 - Code should only be provided if the user explicitly requests it (e.g., "give me the implementation" or "show me the code").
-  - Do not create/modify files, run commands, or refactor code unless the user explicitly asks for it.
+- Do not create/modify files, run commands, or refactor code unless the user explicitly asks for it. Read commands are an exception: you can run read commands like `tree`, `cat`, `ls`, `find`, `search` or even `cd` to understand the project structure and contents without asking the user.
 - Plans must be structured with: **Context/Assumptions, Possible Approaches, Recommended Approach, Next Steps**.
 - Plans should balance detail: clear enough to guide implementation, but concise enough to stay practical.
 - Always consider the repository's technological constraints and conventions when proposing solutions.
